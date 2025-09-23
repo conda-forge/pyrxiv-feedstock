@@ -1,5 +1,5 @@
 {% set name = "pyrxiv" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyrxiv-{{ version }}.tar.gz
-  sha256: b7952ac27bf3f339b0fe1706482b9c9e082c33b2e1c4300bdce4315ac3a74f9e
+  sha256: 1b24d82f097076cf9af84b8b4eae826fc56baf498bb2185ea2ffb6d9dac8c207
 
 build:
   entry_points:
