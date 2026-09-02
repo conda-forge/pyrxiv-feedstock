@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: pyrxiv
   version: "1.0.2"
-  python_min: "3.10"
 
 package:
   name: ${{ name|lower }}
@@ -23,7 +22,7 @@ build:
 
 requirements:
   host:
-    - python 3.10.*
+    - python ${{ python_min }}
     - setuptools >=61.0.0
     - setuptools-scm >=8.0
     - pip
@@ -44,7 +43,9 @@ tests:
       imports:
         - pyrxiv
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
   - requirements:
       run:
         - pip
